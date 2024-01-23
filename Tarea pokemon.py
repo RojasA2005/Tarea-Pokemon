@@ -18,8 +18,7 @@ while PS_jugador > 0 and PS_oponente > 0:
         if defensa_oponente <= 0:
             defensa_oponente = 1
     elif ataque_jugador.lower() == ataques_posibles[1]:
-        damage = 35 * (100/defensa_oponente)
-        damage = round(damage, 2)
+        damage = round(35 * (100/defensa_oponente), 2)
         PS_oponente -= damage
         print("Bien! hiciste {} de daño!".format(damage))
     elif ataque_jugador.lower() == ataques_posibles[2]:
@@ -36,12 +35,10 @@ while PS_jugador > 0 and PS_oponente > 0:
         if defensa_jugador <= 0:
             defensa_jugador = 1
     elif ataque_oponente == 1: #tackle
-        ataques_posibles_opp[ataque_oponente][2] = 35 * (100/defensa_jugador)
-        ataques_posibles_opp[ataque_oponente][2] = round(ataques_posibles_opp[ataque_oponente][2], 2)
+        ataques_posibles_opp[ataque_oponente][2] = round(35 * (100/defensa_jugador), 2)
         PS_jugador -= ataques_posibles_opp[ataque_oponente][2] 
     elif ataque_oponente == 2: #water gun
-        ataques_posibles_opp[ataque_oponente][2] = 40 * (100/defensa_jugador)
-        ataques_posibles_opp[ataque_oponente][2] = round(ataques_posibles_opp[ataque_oponente][2], 2)
+        ataques_posibles_opp[ataque_oponente][2] = round(40 * (100/defensa_jugador), 2)
         PS_jugador -= ataques_posibles_opp[ataque_oponente][2] 
     print("Tu oponente utilizó {}, que te bajó {} puntos de {}".format(ataques_posibles_opp[ataque_oponente][0], str(ataques_posibles_opp[ataque_oponente][2]), ataques_posibles_opp[ataque_oponente][1]))
         
